@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <!-- Like in themes.xml, the namespace "*.AppCompat.Base" is used to
+         define base styles for the platform version. The "*.AppCompat"
+         variants are for direct use or use as parent styles by the app. -->
+    <eat-comment/>
+
+    <style name="Widget.AppCompat.Base.ActionBar" parent="">
+    </style>
+
+    <style name="Widget.AppCompat.Base.ActionButton" parent="">
+    </style>
+
+    <style name="Widget.AppCompat.Base.ActionButton.Overflow">
+    </style>
+
+    <style name="Widget.AppCompat.Base.ActionBar.TabBar" parent="">
+    </style>
+
+    <style name="Widget.AppCompat.Base.ActionBar.TabView" parent="">
+    </style>
+
+    <style name="Widget.AppCompat.Base.ActionBar.TabText" parent="">
+    </style>
+
+    <style name="Widget.AppCompat.Base.ActionMode" parent="">
+    </style>
+
+
+    <style name="TextAppearance.AppCompat.Base.Widget.ActionBar.Menu"
+           parent="@android:style/TextAppearance.Small">
+    </style>
+
+    <!-- Default action bar style. Remember that if you are overriding
+         any attributes here in a derived style, you should declare each
+         item twice - both with and without the "android:" namespace prefix. -->
+    <style name="Widget.AppCompat.ActionBar" parent="Widget.AppCompat.Base.ActionBar">
+        <item name="background">@drawable/action_bar_background</item>
+        <item name="displayOptions">useLogo|showHome|showTitle</item>
+        <item name="divider">@drawable/action_bar_divider</item>
+        <item name="height">?attr/actionBarSize</item>
+        <item name="titleTextStyle">@style/TextAppearance.Widget.AppCompat.ActionBar.Title</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.Widget.AppCompat.ActionBar.Subtitle
+        </item>
+        <item name="progressBarStyle">@style/Widget.AppCompat.ProgressBar.Horizontal</item>
+        <item name="indeterminateProgressStyle">@style/Widget.AppCompat.ProgressBar.Small</item>
+        <item name="homeLayout">@layout/action_bar_home</item>
+    </style>
+
+    <style name="Widget.AppCompat.Light.ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/TextAppearance.Widget.AppCompat.ActionBar.Title</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.Widget.AppCompat.ActionBar.Subtitle
+        </item>
+        <item name="background">@drawable/ab_transparent_light_holo</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_transparent_light_holo</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_transparent_light_holo</item>
+        <item name="homeAsUpIndicator">@drawable/ic_ab_back_holo_light</item>
+        <!-- TODO(trevorjohns): Action Bar styles below are from Holo. Port over rest of Holo? -->
+        <!--<item name="progressBarStyle">@style/Widget.AppCompat.Light.ProgressBar.Horizontal</item>-->
+        <!--<item name="indeterminateProgressStyle">@style/Widget.AppCompat.Light.ProgressBar</item>-->
+    </style>
+
+    <style name="TextAppearance.Widget.AppCompat.ActionBar.Title"
+           parent="@android:style/TextAppearance.Medium">
+    </style>
+    <style name="TextAppearance.Widget.AppCompat.ActionBar.Subtitle"
+           parent="@android:style/TextAppearance.Small">
+    </style>
+
+    <style name="Widget.AppCompat.ProgressBar.Horizontal" parent="android:Widget.ProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <style name="Widget.AppCompat.ProgressBar.Small" parent="android:Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progress_small_white</item>
+        <item name="android:minWidth">16dip</item>
+        <item name="android:maxWidth">16dip</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
+
+
+    <!-- TODO(anirudhd): The item below doesn't work. -->
+    <!--<style name="Widget.AppCompat.ListPopupWindow">-->
+    <!--<item name="android:dropDownSelector">@android:drawable/list_selector_background</item>-->
+    <!--<item name="android:popupBackground">@android:drawable/spinner_dropdown_background</item>-->
+    <!--<item name="android:dropDownWidth">wrap_content</item>-->
+    <!--</style>-->
+
+    <!--<style name="Widget.AppCompat.PopupMenu" parent="Widget.AppCompat.ListPopupWindow">-->
+    <!--</style>-->
+
+    <style name="Widget.AppCompat.ActionButton" parent="Widget.AppCompat.Base.ActionButton">
+    </style>
+
+    <style name="Widget.AppCompat.ActionButton.Overflow">
+    </style>
+
+    <style name="Widget.AppCompat.ActionBar.TabBar" parent="Widget.AppCompat.Base.ActionBar.TabBar">
+    </style>
+
+    <style name="Widget.AppCompat.ActionBar.TabView"
+           parent="Widget.AppCompat.Base.ActionBar.TabView">
+    </style>
+
+    <style name="Widget.AppCompat.ActionBar.TabText"
+           parent="Widget.AppCompat.Base.ActionBar.TabText">
+        <item name="android:maxWidth">180dip</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Widget.TextView</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Menu"
+           parent="TextAppearance.AppCompat.Base.Widget.ActionBar.Menu">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/actionMenuTextColor</item>
+    </style>
+
+
+    <style name="Widget.AppCompat.ActionMode" parent="Widget.AppCompat.Base.ActionMode">
+        <item name="android:background">?attr/actionModeBackground</item>
+        <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
+        <item name="android:height">?attr/actionBarSize</item>
+        <item name="titleTextStyle">@style/TextAppearance.Widget.ActionMode.Title</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.Widget.ActionMode.Subtitle</item>
+    </style>
+
+    <style name="TextAppearance.Widget.ActionMode.Title"
+           parent="@android:style/TextAppearance.Medium">
+    </style>
+
+    <style name="TextAppearance.Widget.ActionMode.Subtitle"
+           parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="Widget.ActionBar.TabView" parent="Widget.AppCompat.ActionBar">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/minitab_lt</item>
+        <item name="paddingStart">4dip</item>
+        <item name="paddingEnd">4dip</item>
+    </style>
+
+</resources>
